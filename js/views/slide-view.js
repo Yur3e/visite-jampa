@@ -1,4 +1,4 @@
-import debounce from './debounce.js';
+import debounce from '../utils/debounce.js';
 
 const DRAG_SENSITIVITY = 1.6;
 const DRAG_THRESHOLD = 120;

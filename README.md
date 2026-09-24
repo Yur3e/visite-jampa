@@ -40,12 +40,21 @@ O comando de build é compatível com Windows e com ambientes Linux, como o Verc
 
 ## Organização
 
+- `js/app.js`: inicializa a aplicação.
 - `index.html`: estrutura e conteúdo da página.
 - `css/style.css`: tokens de design, layout, componentes e responsividade.
-- `js/script.js`: ponto de inicialização das interações.
-- `js/modules/`: componentes isolados (slide, modal, abas, acordeão e indicadores).
+- `js/controllers/`: coordenação das regras de interface e fluxo de dados.
+- `js/models/`: acesso e validação dos dados da aplicação.
+- `js/views/`: componentes de interface e renderização do DOM.
+- `js/utils/`: utilitários reutilizáveis, sem dependência da interface.
 - `indicadores-jampa.json`: dados exibidos na seção de números.
 - `img/jampa/`: imagens locais do projeto.
+
+```text
+app.js → AppController
+          ├── Views de navegação, modal, abas e galeria
+          └── IndicadoresController → IndicadoresModel + IndicadoresView
+```
 
 ## Limites atuais
 
